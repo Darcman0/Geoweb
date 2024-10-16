@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="stylesheet" href="/css/map.css">
+<style type="text/css">
+    #map {height: 80vh;};
+</style>
+
+</head>
+
+<body>
+    <h1>My map</h1>
+
+
+    <div id="map"> 
+        <div class="coordinate"> </div>
+    </div>
+
+    
+    
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script type="text/javascript" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
+     <script  type="text/javascript" src="./js/leaflet.browser.print.min.js"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--ajout des données geoJson transformer en .JS -->
+     <script type="text/javascript" src="./donnees/SN_region.js"></script>
+     <script type="text/javascript" src="./donnees/SN_route_nationale.js"></script>
+
+     <script type="text/javascript" src="./js/map.js"></script> 
+ 
+ <!--    // initialise the map
+
+//add of the basemap to the map 
+
+   
+   
+// get the coodinate hoover the map
+map.on("mousemove",function(event){
+    $("#coordinate").html("Lat:${event.latlng.lat}, Lng:${event.latlng.lng}")
+    })
+// ajout de l'échelle dynamique
+    L.control.scale({position:"bottomleft"}).addTo(map)
+
+    // default position of zoom control
+    map.zoomControl.setPosition("topright")
+
+ -->
+</body>
+</html>

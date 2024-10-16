@@ -1,0 +1,11 @@
+#map {
+    height: 90vh;
+}
+.coordinate {
+    position: absolute;
+    left: 40%;
+    background: #fff;
+    z-index: 99999;
+    height: 6px;
+   
+}
