@@ -2,7 +2,7 @@
     height: 90vh;
 }
 .coordinate {
-    position: absolute;
+    position: absolute bottom center;
     left: 40%;
     background: #fff;
     z-index: 99999;
