@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
+   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/map.css">
 <style type="text/css">
     #map {height: 80vh;};
@@ -16,7 +17,37 @@
 
 <body>
     <h1>My map</h1>
-
+    <!-- le conteneur principal  des menu-->
+<div class="container-fluid" style="border: 1px solid #000;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a target="_blank" class="navbar-brand" href="https://darcman0.github.io/">
+            <img src="./img/LOGO.png" alt="Dr Sig logo" style="height: 40px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
 
     <div id="map"> 
         <div class="coordinate"> </div>
@@ -28,7 +59,8 @@
      <script type="text/javascript" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
      <script  type="text/javascript" src="./js/leaflet.browser.print.min.js"></script>
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <!--ajout des données geoJson transformer en .JS -->
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+     <!--ajout des données geoJson transformer en .JS -->
      <script type="text/javascript" src="./donnees/SN_region.js"></script>
      <script type="text/javascript" src="./donnees/SN_route_nationale.js"></script>
 

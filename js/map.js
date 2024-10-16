@@ -47,10 +47,11 @@ L.control.layers(baseLayers, overlays,{collapsed:false}).addTo(map);
 // ajout de leaflet impression de carte web
 L.control.browserPrint({position: 'topleft'}).addTo(map);
 
-// coordonner du hover de la souris
-map.on("mousemove",function(e){
-    console.log(e)
-    $('.coordinate').html('Lat: ${e.latlng.lat},Lng : ${e.latlng.lng}')
-//$('.coordinate').html("Lat:${e.latlng.lat} ,Lng:${e.latlng.lng}")
+// coordonner du hover de la souris et recupérer les coordonnes latitudinaux et longitudinaux et les ecrire dans la div avec la class coordinate
+
+
+    map.on('mousemove', function(e) {
+        console.log(e)
+        $('.coordinate').html(`Lat: ${e.latlng.lat}, Lng: ${e.latlng.lng}`);
+    });
    
-})
