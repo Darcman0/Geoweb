@@ -1,5 +1,5 @@
 // initialise map
-var map = L.map("map").setView([14.70, -17.30], 13);
+var map = L.map("map").setView([15, -15], 7);
 
 
 // add the scale bar to the map
