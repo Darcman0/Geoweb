@@ -24,10 +24,18 @@ var region = L.geoJSON(Sn_reg,{
   ).bindPopup(function  (layer) {
      return "Région de : " + layer.feature.properties.REG
 }).addTo(map)
+// ajout des routes
 var route_national = L.geoJSON(route_national,{
     style: {color:"black",weight: "3", dashArray: "10, 20", dashOffset: "20"}
-})
+});
+  
+    // Ajout des Département a partir de github 
+var url = 'https://github.com/Darcman0/My_data/blob/main/Senegal/Administrative/SN_departement.geojson';
+$.getJSON(url, function (geojson) {
+var Departement = L.geoJson(geojson).addTo(map)
+});
 
+    
 
 // basemaps legend
 var baseLayers = {
@@ -38,7 +46,8 @@ var baseLayers = {
 // layers legend
 var overlays = {
    "Route nationale" : route_national,
-   "Région": region
+   "Région": region,
+   "Departement": Departement
 };
 // controle de la légende 
 L.control.layers(baseLayers, overlays,{collapsed:false}).addTo(map);
