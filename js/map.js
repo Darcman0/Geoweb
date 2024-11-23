@@ -26,8 +26,8 @@ var region = L.geoJSON(Sn_reg,{
 }).addTo(map)
 // ajout des routes
 var route_national = L.geoJSON(route_national,{
-    style: {color:"black",weight: "3", dashArray: "10, 20", dashOffset: "20"}
-}).addTo(map);
+    style: {color:"black",weight: "3",  dashOffset: "20"}
+});
   
     // Ajout des Département a partir de github 
 // var url = 'https://github.com/Darcman0/My_data/blob/fb2ceba48dd41badfdb89c5558e41c213c76b62f/Senegal/Administrative/SN_departement.geojson';
