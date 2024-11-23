@@ -27,13 +27,13 @@ var region = L.geoJSON(Sn_reg,{
 // ajout des routes
 var route_national = L.geoJSON(route_national,{
     style: {color:"black",weight: "3", dashArray: "10, 20", dashOffset: "20"}
-});
+}).addTo(map);
   
     // Ajout des Département a partir de github 
 var url = 'https://github.com/Darcman0/My_data/blob/main/Senegal/Administrative/SN_departement.geojson';
 $.getJSON(url, function (geojson) {
-var Departement = L.geoJson(geojson).addTo(map)
-});
+var Departement = L.geoJson(geojson)
+}).addTo(map);
 
     
 
