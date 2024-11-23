@@ -10,6 +10,7 @@ var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/
 	maxZoom: 20,
 	attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 // add google basemap
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
         maxZoom: 20,
@@ -18,22 +19,17 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
 
 // Ajout des geojson
 var region = L.geoJSON(Sn_reg,{ 
-    style:{
-        color:"red"
-    }}
-  ).bindPopup(function  (layer) {
+    style:{color:"red"}
+    }).bindPopup(function  (layer) {
      return "Région de : " + layer.feature.properties.REG
 }).addTo(map)
+
 // ajout des routes
 var route_national = L.geoJSON(route_national,{
-    style: {color:"black",weight: "3",  dashOffset: "20"}
-});
+    color:"blue"
+}).addTo(map);
   
-    // Ajout des Département a partir de github 
-// var url = 'https://github.com/Darcman0/My_data/blob/fb2ceba48dd41badfdb89c5558e41c213c76b62f/Senegal/Administrative/SN_departement.geojson';
-// $.getJSON(url, function (geojson) {
-// var Departement = L.geoJson(geojson)
-// }).addTo(map);
+   
 
     
 
@@ -43,6 +39,7 @@ var baseLayers = {
     "OSM": OpenStreetMap_France,
     "google Satellite": googleSat
 };
+
 // layers legend
 var overlays = {
    "Route nationale" : route_national,
@@ -61,6 +58,6 @@ L.control.browserPrint({position: 'topleft'}).addTo(map);
 
     map.on('mousemove', function(e) {
         console.log(e)
-        $('.coordinate').html(`Lat: ${e.latlng.lat}, Lng: ${e.latlng.lng}`);
+        $('.coordinate').html('Lat: ${e.latlng.lat}, Lng: ${e.latlng.lng}');
     });
    
